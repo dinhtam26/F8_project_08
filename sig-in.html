@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grocery Mart</title>
+    <title>Sig in | Grocery Mart</title>
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/android-chrome-96x96.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
@@ -16,31 +16,26 @@
     <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
 
     <!-- Style -->
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base/main.css">
     
     <!-- Script -->
     <script src="./assets/js/script.js"></script>
 </head>
 <body>
+    <!-- Header -->
+    <header id="header"></header>
+    <script>
+        load("#header", "./template/header.html");
+    </script>
 
-    <header id="header" class="header">
+    <!-- Main -->
+    <h1>Sig In page</h1>
+    <!-- Footer -->
+    <footer id="footer">
 
-    </header>
-        <script>
-            load("#header", "./templates/header.html");
-        </script>
-    <div class="container">
-        <!-- Header -->
-        
-
-        
-        <!-- Footer -->
-        <footer id="footer">
-
-        </footer>
-        <script>
-            load("#footer", "./templates/footer.html");
-        </script>
-    </div>
+    </footer>
+    <script>
+        load("#footer", "./template/footer.html");
+    </script>
 </body>
 </html>
