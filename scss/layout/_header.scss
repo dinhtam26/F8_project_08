@@ -1,5 +1,6 @@
 @use "../abstracts";
 
+// Placeholder Select
 %flexItemCenter {
     display: flex;
     align-items: center;
@@ -8,12 +9,15 @@
 .header {
     background-color: var(--header-bg-color);
 
-    
+    @include abstracts.breakpoint(lg) {
+        box-shadow: 0px 20px 60px 10px var(--header-shadow-color);
+    }
 }
 
 
 
 .top-bar {
+    position: relative;
     @extend %flexItemCenter;
     padding: 30px 0;
 
@@ -21,7 +25,7 @@
         padding: 20px 0;
     }
 
-    @include abstracts.breakpoint(sm) {
+    @include abstracts.breakpoint(md) {
         padding: 16px 20px;
         justify-content: space-between;
     }
@@ -36,11 +40,11 @@
         }
     }
 
-    
+
 }
 
 .navbar {
-    margin-left: 144px;
+    margin-left: 129px;
 
     @include abstracts.breakpoint(xl) {
         margin-left: 25px;
@@ -52,7 +56,15 @@
 
     &__list {
         @extend %flexItemCenter;
-        gap: 30px;
+    }
+
+    &__item {
+        padding: 0 15px;
+
+        &:hover .dropdown {
+            display: block;
+        }
+
     }
 
     &__link {
@@ -61,12 +73,14 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 1.466;
-    
+        height: 50px;
     }
 
     &__arrow {
         margin-top: 3px;
     }
+
+
 }
 
 .top-act {
@@ -74,10 +88,10 @@
     margin-left: auto;
     gap: 20px;
 
-    @include abstracts.breakpoint(sm) {
+    @include abstracts.breakpoint(md) {
         margin-left: 0;
     }
-    
+
 
     &__group {
         @extend %flexItemCenter;
@@ -88,17 +102,21 @@
         height: 50px;
 
         border-radius: 8px;
-        background:  var(--top-act-group-bg-color);
+        background: var(--top-act-group-bg-color);
         box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
 
         @include abstracts.breakpoint(md) {
             display: none;
         }
-    
+
     }
 
     &__group-single {
         padding: 13px;
+
+        @include abstracts.breakpoint(lg) {
+            display: none;
+        }
     }
 
     &__separate {
@@ -115,9 +133,9 @@
 
     &__title {
         font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.467;
-    } 
+        font-weight: 500;
+        line-height: 1.467;
+    }
 
     &__avatar {
         display: block;
@@ -128,4 +146,3 @@
         cursor: pointer;
     }
 }
-
